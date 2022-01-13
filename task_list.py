@@ -1,3 +1,6 @@
+from webbrowser import get
+
+
 tasks = [
     { "description": "Wash Dishes", "completed": False, "time_taken": 10 },
     { "description": "Clean Windows", "completed": False, "time_taken": 15 },
@@ -10,15 +13,33 @@ tasks = [
 
 ## Get a list of uncompleted tasks
 def get_uncompleted_tasks(list):
-    pass
+    uncompleted_tasks = []
+    for task in list:
+        if task["completed"] == False:
+            uncompleted_tasks.append(task)
+    return uncompleted_tasks
+
+print(get_uncompleted_tasks(tasks))
 
 ## Get a list of completed tasks
 def get_completed_tasks(list):
-    pass
+    completed_tasks = []
+    for task in list:
+        if task["completed"]:
+            completed_tasks.append(task)
+    return completed_tasks
+
+print(get_completed_tasks(tasks))
 
 ## Get tasks where time_taken is at least a given time
 def get_tasks_taking_at_least(list, time):
-    pass
+    lengthy_tasks = []
+    for task in list:
+        if task["time_taken"] >= time:
+            lengthy_tasks.append(task)
+    return lengthy_tasks
+
+print(get_tasks_taking_at_least(tasks, 20))
 
 ## Find a task with a given description
 def get_task_with_description(list, description):
