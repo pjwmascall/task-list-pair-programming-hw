@@ -18,9 +18,9 @@ while (True):
         task = get_task_with_description(tasks, option_4_input())
         if task is not None:
             mark_task_complete(task)
-            print("Task marked complete")
+            print("\nTask marked complete")
         else:
-            print("Task not found")
+            print("\nTask not found")
     elif option == '5':
         print_list(get_tasks_taking_at_least(tasks, option_5_input()))
     elif option == '6':
@@ -29,4 +29,4 @@ while (True):
         task = create_task(option_7_input_description(), option_7_input_time_taken())
         tasks.append(task)
     else:
-        print("Invalid Input - choose another option")
+        print("\nInvalid Input - choose another option")
