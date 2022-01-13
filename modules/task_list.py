@@ -1,14 +1,5 @@
 from webbrowser import get
 
-
-tasks = [
-    { "description": "Wash Dishes", "completed": False, "time_taken": 10 },
-    { "description": "Clean Windows", "completed": False, "time_taken": 15 },
-    { "description": "Make Dinner", "completed": True, "time_taken": 30 },
-    { "description": "Feed Cat", "completed": False, "time_taken": 5 },
-    { "description": "Walk Dog", "completed": True, "time_taken": 60 },
-]
-
 # Functions to complete:
 
 ## Get a list of uncompleted tasks
@@ -43,7 +34,6 @@ def get_task_with_description(list, description):
             return task
     return None
 
-
 # Extention (Function): 
 
 ## Get a list of tasks by status
@@ -62,7 +52,6 @@ def create_task(description, time_taken):
     task["description"] = description
     task["completed"] = False
     task["time_taken"] = time_taken
-
     return task
 
 def add_to_list(list, task):
