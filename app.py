@@ -24,7 +24,11 @@ while (True):
     elif option == '5':
         print_list(get_tasks_taking_at_least(tasks, option_5_input()))
     elif option == '6':
-        print(get_task_with_description(tasks, option_6_input()))
+        task = get_task_with_description(tasks, option_6_input())
+        if task is not None:
+            print_task(task)
+        else:
+            print("\nTask not found")
     elif option == '7':
         task = create_task(option_7_input_description(), option_7_input_time_taken())
         tasks.append(task)
