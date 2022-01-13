@@ -19,8 +19,6 @@ def get_uncompleted_tasks(list):
             uncompleted_tasks.append(task)
     return uncompleted_tasks
 
-print(get_uncompleted_tasks(tasks))
-
 ## Get a list of completed tasks
 def get_completed_tasks(list):
     completed_tasks = []
@@ -28,8 +26,6 @@ def get_completed_tasks(list):
         if task["completed"]:
             completed_tasks.append(task)
     return completed_tasks
-
-print(get_completed_tasks(tasks))
 
 ## Get tasks where time_taken is at least a given time
 def get_tasks_taking_at_least(list, time):
@@ -39,17 +35,25 @@ def get_tasks_taking_at_least(list, time):
             lengthy_tasks.append(task)
     return lengthy_tasks
 
-print(get_tasks_taking_at_least(tasks, 20))
 
 ## Find a task with a given description
 def get_task_with_description(list, description):
-    pass
+    
+    for task in list:
+        if task["description"] == description:
+            return task
+    return None
+
 
 # Extention (Function): 
 
 ## Get a list of tasks by status
 def get_tasks_by_status(list, status):
-    pass
+    tasks_by_status = []
+    for task in list:
+        if task["completed"] == status:
+            tasks_by_status.append(task)
+    return tasks_by_status
 
 def mark_task_complete(task):
     task["completed"] = True
@@ -68,7 +72,7 @@ def add_to_list(list, task):
 def print_task(task):
     print(f'Description: { task["description"] }')
     print(f'Status: { "Completed" if task["completed"] else "Incomplete"}')
-    print(f'Time Taken: {task["time_taken"]} mins')
+    print(f'Time Taken: {task["time_taken"]} mins\n')
 
 def print_list(list):
     for task in list:
