@@ -26,7 +26,6 @@ def get_tasks_taking_at_least(list, time):
             lengthy_tasks.append(task)
     return lengthy_tasks
 
-
 ## Find a task with a given description
 def get_task_with_description(list, description):    
     for task in list:

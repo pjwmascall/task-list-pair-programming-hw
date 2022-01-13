@@ -1,6 +1,12 @@
-option = input("Select an option 1, 2, 3, 4, 5, display (m)enu or (q)uit: ")
-option_4_input = input("Enter task description to search for: ")
-option_5_input = int(input("Enter task duration: "))
-option_6_input = input("Enter task description to search for: ")
-option_7_input_description = input("Enter description: ")
-option_7_input_time_taken = int(input("Enter time taken: "))
+def option():
+    return input("Select an option 1, 2, 3, 4, 5, display (m)enu or (q)uit: ")
+def option_4_input():
+    return input("Enter task description to search for: ")
+def option_5_input():
+    return int(input("Enter task duration: "))
+def option_6_input():
+    return input("Enter task description to search for: ")
+def option_7_input_description():
+    return input("Enter description: ")
+def option_7_input_time_taken():
+    return int(input("Enter time taken: "))
