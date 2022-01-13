@@ -1,4 +1,7 @@
 
+def load_task_list():
+    return input("\nWould you like to load an existing task list? Answer (y)es or (n)o: ")
+
 def select_option():
     return input("\nSelect an option 1, 2, 3, 4, 5, 6, 7, display (m)enu or (q)uit: ")
 
@@ -17,7 +20,7 @@ def option_6_input():
 
 def option_7_input_description():
     return input("\nEnter description: ")
-    
+
 def option_7_input_time_taken():
     try:
         return int(input("\nEnter time taken: "))

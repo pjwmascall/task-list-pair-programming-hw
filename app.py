@@ -1,13 +1,27 @@
-from modules.task_list import *
+from modules.task_list_functions import *
 from modules.output import *
-from data.task_list import *
 from modules.input import *
 
+task_list_flag = True
+
 while (True):
+    if task_list_flag:
+        answer = load_task_list()
+        if (answer.lower() == "y" or answer.lower() == "yes"):
+            from data.task_list import *
+            task_list_flag = False
+        elif (answer.lower() == "n" or answer.lower() == "no"):
+            tasks = []
+            task_list_flag = False
+        else:
+            print("\nPlease answer (y)es or (n)o")
+            continue
     print_menu()
     option = select_option()
     if (option.lower() == 'q'):
         break
+    elif (option.lower() == 'm'):
+        pass
     elif option == '1':
         print_list(tasks)
     elif option == '2':
